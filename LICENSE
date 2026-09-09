@@ -1,0 +1,11 @@
+
+以后我们再做正式文档。
+
+### 第二，Icon 字体现在有 3 份
+
+你发布包里有：
+
+```text
+packages/icon/fonts/iconfont.ttf
+packages/icon/fonts/iconfont.woff
+packages/icon/fonts/maple-icon.woff2

@@ -1,0 +1,54 @@
+<view class="demo-page">
+  <view class="demo-title">Maple Weapp</view>
+  <view class="demo-section">
+    <view class="demo-section__title">Button Type</view>
+    <view class="demo-item">
+      <m-button>默认按钮</m-button>
+    </view>
+    <view class="demo-item">
+      <m-button type="primary">主要按钮</m-button>
+    </view>
+    <view class="demo-item">
+      <m-button type="danger">危险按钮</m-button>
+    </view>
+  </view>
+  <view class="demo-section">
+    <view class="demo-section__title">Button Size</view>
+    <view class="demo-row">
+      <m-button size="small">Small</m-button>
+      <m-button size="medium">Medium</m-button>
+      <m-button size="large">Large</m-button>
+    </view>
+  </view>
+  <view class="demo-section">
+    <view class="demo-section__title">Button State</view>
+    <view class="demo-item">
+      <m-button type="primary" loading>加载中</m-button>
+    </view>
+    <view class="demo-item">
+      <m-button type="primary" disabled>禁用按钮</m-button>
+    </view>
+  </view>
+  <view class="demo-section">
+    <view class="demo-section__title">Block</view>
+    <view class="demo-block">
+      <m-button type="primary" block>通栏按钮</m-button>
+    </view>
+  </view>
+  <view class="demo-row">
+    <m-icon name="search" />
+    <m-icon name="close" />
+    <m-icon name="plus" />
+    <m-icon name="check" />
+    <m-icon name="edit" />
+    <m-icon name="chevron-left" />
+    <m-icon name="chevron-right" />
+    <m-icon name="search" size="48" color="#1677ff" />
+  </view>
+  <view class="demo-row">
+    <m-loading />
+    <m-loading size="40" color="#1677ff" />
+    <m-loading size="40" color="#e34d59" text="加载中" />
+  </view>
+  <m-cell title="账号与安全" label="修改密码、手机号等信息" clickable arrow />
+</view>

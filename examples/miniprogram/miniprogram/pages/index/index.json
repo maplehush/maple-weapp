@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "m-button": "/components/button/index",
+    "m-icon": "/components/icon/index",
+    "m-loading": "/components/loading/index",
+    "m-cell": "/components/cell/index"
+  }
+}
