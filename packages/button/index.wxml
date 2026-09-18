@@ -1,17 +1,14 @@
-<view class="
-    m-button-host
-    {{block ? 'm-button-host--block' : ''}}
-  ">
-  <button class="
-      m-button
-      m-button--{{type}}
-      m-button--{{size}}
-      {{block ? 'm-button--block' : ''}}
-      {{disabled ? 'm-button--disabled' : ''}}
-      {{loading ? 'm-button--loading' : ''}}
-    " disabled="{{disabled || loading}}" hover-class="{{disabled || loading ? 'none' : 'm-button--active'}}" hover-start-time="0" hover-stay-time="80" bindtap="onTap">
+<view class="m-button-host {{block ? 'm-button-host--block' : ''}}">
+  <button
+    class="m-button m-button--{{type}} m-button--{{size}} {{block ? 'm-button--block' : ''}} {{disabled ? 'm-button--disabled' : ''}} {{loading ? 'm-button--loading' : ''}}"
+    disabled="{{disabled || loading}}"
+    hover-class="{{disabled || loading ? 'none' : 'm-button--active'}}"
+    hover-start-time="0"
+    hover-stay-time="80"
+    bindtap="onTap"
+  >
     <view class="m-button__inner">
-      <view wx:if="{{loading}}" class="m-button__loading">
+      <view wx:if="{{loading}}" class="m-button__loading" aria-label="loading">
         <view class="m-button__loading-circle"></view>
       </view>
       <view class="m-button__content">
