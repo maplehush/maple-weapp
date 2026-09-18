@@ -20,6 +20,11 @@ Component({
       value: false
     },
 
+    disabled: {
+      type: Boolean,
+      value: false
+    },
+
     border: {
       type: Boolean,
       value: true
@@ -33,7 +38,7 @@ Component({
 
   methods: {
     onTap() {
-      if (!this.data.clickable) {
+      if (!this.data.clickable || this.data.disabled) {
         return
       }
 
