@@ -157,6 +157,11 @@
   </view>
 
   <view class="demo-section">
+    <view class="demo-section__title">Tabs</view>
+    <m-tabs tabs="{{[{"title":"推荐"},{"title":"热门"},{"title":"最新"}]}}" />
+  </view>
+
+  <view class="demo-section">
     <view class="demo-section__title">Card</view>
     <view class="demo-item">
       <m-card title="账户信息" subtitle="基础资料">
