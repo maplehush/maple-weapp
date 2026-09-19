@@ -1,0 +1,12 @@
+<view class="demo-toast">
+  <m-toast
+    visible="{{visible}}"
+    message="操作成功"
+    type="success"
+    duration="0"
+    bindclose="onClose"
+  />
+  <view class="demo-toast__actions">
+    <button bindtap="onShow">显示 Toast</button>
+  </view>
+</view>

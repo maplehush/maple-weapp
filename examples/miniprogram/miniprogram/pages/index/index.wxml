@@ -112,4 +112,9 @@
       <m-tag disabled closable>禁用</m-tag>
     </view>
   </view>
+
+  <view class="demo-section">
+    <view class="demo-section__title">Toast</view>
+    <m-toast message="操作成功" type="success" duration="0" visible />
+  </view>
 </view>
