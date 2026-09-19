@@ -158,7 +158,11 @@
 
   <view class="demo-section">
     <view class="demo-section__title">Tabs</view>
-    <m-tabs tabs="{{[{"title":"推荐"},{"title":"热门"},{"title":"最新"}]}}" />
+    <m-tabs tabs="{{tabs}}" active="{{tabsActive}}" bindchange="onChangeTabs">
+      <view wx:if="{{tabsActive === 0}}" style="padding: 32rpx;">推荐内容</view>
+      <view wx:elif="{{tabsActive === 1}}" style="padding: 32rpx;">热门内容</view>
+      <view wx:else style="padding: 32rpx;">最新内容</view>
+    </m-tabs>
   </view>
 
   <view class="demo-section">
