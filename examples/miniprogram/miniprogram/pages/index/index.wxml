@@ -157,6 +157,13 @@
   </view>
 
   <view class="demo-section">
+    <view class="demo-section__title">Navbar</view>
+    <m-navbar title="页面标题" backable>
+      <view slot="right" style="font-size: 28rpx; color: var(--m-color-primary);">操作</view>
+    </m-navbar>
+  </view>
+
+  <view class="demo-section">
     <view class="demo-section__title">Tabs</view>
     <m-tabs tabs="{{tabs}}" active="{{tabsActive}}" bindchange="onChangeTabs">
       <view wx:if="{{tabsActive === 0}}" style="padding: 32rpx;">推荐内容</view>
