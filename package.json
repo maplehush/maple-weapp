@@ -16,5 +16,8 @@
   "license": "MIT",
   "devDependencies": {
     "miniprogram-api-typings": "^5.2.3"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
   }
 }
