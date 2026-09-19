@@ -4,13 +4,18 @@
 
 ## 初始化
 
-在本目录执行：
+小程序的 `package.json` 与 `node_modules` 放在 `miniprogramRoot` 内，这是微信开发者工具构建 npm 最稳定的目录结构。
+
+进入小程序源码目录：
 
 ```bash
+cd examples/miniprogram/miniprogram
 npm install
 ```
 
-然后用微信开发者工具打开 `examples/miniprogram`，执行「构建 npm」。构建完成后，示例页会从 `miniprogram_npm/maple-weapp` 加载组件。
+然后用微信开发者工具打开 `examples/miniprogram`，执行「工具 → 构建 npm」。构建结果会写入 `miniprogram/miniprogram_npm`，示例页会从 `/miniprogram_npm/maple-weapp` 加载组件。
+
+本地开发时，`maple-weapp` 使用仓库根目录的 `file:../../../` 依赖，因此不需要先发布到 npm。
 
 ## 页面
 
