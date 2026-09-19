@@ -7,7 +7,7 @@ Component({
 
     color: {
       type: String,
-      value: '#1677ff'
+      value: 'var(--m-color-primary)'
     },
 
     text: {
