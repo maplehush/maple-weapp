@@ -1,195 +1,36 @@
-<view class="demo-page">
-  <view class="demo-title">Maple Weapp</view>
-  <view class="demo-subtitle">Component & Design Token Playground</view>
-
-  <view class="demo-section">
-    <view class="demo-section__title">Button Type</view>
-    <view class="demo-item"><m-button>默认按钮</m-button></view>
-    <view class="demo-item"><m-button type="primary">主要按钮</m-button></view>
-    <view class="demo-item"><m-button type="danger">危险按钮</m-button></view>
+<view class="home-page">
+  <view class="home-header">
+    <view class="home-kicker">MAPLE WEAPP</view>
+    <view class="home-title">组件库</view>
+    <view class="home-subtitle">原生微信小程序组件与设计 Token 示例</view>
   </view>
 
-  <view class="demo-section">
-    <view class="demo-section__title">Button Size & State</view>
-    <view class="demo-row">
-      <m-button size="small">Small</m-button>
-      <m-button size="medium">Medium</m-button>
-      <m-button size="large">Large</m-button>
-    </view>
-    <view class="demo-item demo-item--spaced"><m-button type="primary" loading>加载中</m-button></view>
-    <view class="demo-item"><m-button type="primary" disabled>禁用按钮</m-button></view>
-  </view>
-
-  <view class="demo-section">
-    <view class="demo-section__title">Block</view>
-    <m-button type="primary" block>通栏按钮</m-button>
-  </view>
-
-  <view class="demo-section">
-    <view class="demo-section__title">Icon</view>
-    <view class="demo-row demo-row--icons">
-      <m-icon name="search" />
-      <m-icon name="close" />
-      <m-icon name="plus" />
-      <m-icon name="check" />
-      <m-icon name="edit" />
-      <m-icon name="chevron-left" />
-      <m-icon name="chevron-right" />
-      <m-icon name="search" size="48" />
+  <view class="home-summary">
+    <view class="summary-number">19</view>
+    <view>
+      <view class="summary-title">基础组件</view>
+      <view class="summary-desc">点击组件卡片查看 API 与使用示例</view>
     </view>
   </view>
 
-  <view class="demo-section">
-    <view class="demo-section__title">Loading</view>
-    <view class="demo-row">
-      <m-loading />
-      <m-loading size="40" />
-      <m-loading size="40" color="var(--m-color-danger)" text="加载中" />
-    </view>
-  </view>
-
-  <view class="demo-section">
-    <view class="demo-section__title">Cell</view>
-    <m-cell title="账号与安全" label="修改密码、手机号等信息" clickable arrow />
-    <m-cell title="通知设置" value="已开启" arrow />
-    <m-cell title="禁用状态" value="不可操作" disabled />
-  </view>
-
-  <view class="demo-section">
-    <view class="demo-section__title">Input</view>
-    <view class="demo-item"><m-input placeholder="请输入内容" clearable /></view>
-    <view class="demo-item"><m-input value="只读内容" readonly /></view>
-    <view class="demo-item"><m-input value="禁用内容" disabled /></view>
-  </view>
-
-  <view class="demo-section">
-    <view class="demo-section__title">Textarea</view>
-    <view class="demo-item"><m-textarea placeholder="请输入多行内容" show-count clearable /></view>
-    <view class="demo-item"><m-textarea value="只读多行内容" readonly /></view>
-    <view class="demo-item"><m-textarea value="禁用多行内容" disabled /></view>
-  </view>
-
-  <view class="demo-section">
-    <view class="demo-section__title">Switch</view>
-    <view class="demo-row">
-      <m-switch />
-      <m-switch checked />
-      <m-switch disabled />
-      <m-switch checked disabled />
-    </view>
-  </view>
-
-  <view class="demo-section">
-    <view class="demo-section__title">Checkbox</view>
-    <view class="demo-row">
-      <m-checkbox>未选中</m-checkbox>
-      <m-checkbox checked>已选中</m-checkbox>
-      <m-checkbox indeterminate>半选</m-checkbox>
-      <m-checkbox disabled>禁用</m-checkbox>
-      <m-checkbox checked disabled>禁用选中</m-checkbox>
-    </view>
-  </view>
-
-  <view class="demo-section">
-    <view class="demo-section__title">Radio</view>
-    <view class="demo-row">
-      <m-radio>未选中</m-radio>
-      <m-radio checked>已选中</m-radio>
-      <m-radio disabled>禁用</m-radio>
-      <m-radio checked disabled>禁用选中</m-radio>
-    </view>
-  </view>
-
-  <view class="demo-section">
-    <view class="demo-section__title">Tag</view>
-    <view class="demo-item"><m-tag>默认</m-tag></view>
-    <view class="demo-row">
-      <m-tag type="primary">主要</m-tag>
-      <m-tag type="success">成功</m-tag>
-      <m-tag type="warning">警告</m-tag>
-      <m-tag type="danger">危险</m-tag>
-      <m-tag plain closable>可关闭</m-tag>
-      <m-tag disabled closable>禁用</m-tag>
-    </view>
-  </view>
-
-  <view class="demo-section">
-    <view class="demo-section__title">Toast</view>
-    <m-toast message="操作成功" type="success" duration="0" visible />
-  </view>
-
-  <view class="demo-section">
-    <view class="demo-section__title">Dialog</view>
-    <m-dialog visible title="示例 Dialog" content="基础对话框示例。" />
-  </view>
-
-  <view class="demo-section">
-    <view class="demo-section__title">Popup</view>
-    <button bindtap="onShowPopup">打开 Popup</button>
-    <m-popup visible="{{popupVisible}}" position="bottom" closeable bindclose="onClosePopup">
-      <view>
-        <view style="font-size: 32rpx; font-weight: 600; color: var(--m-text-color-primary); margin-bottom: 12rpx;">示例 Popup</view>
-        <view style="font-size: 28rpx; color: var(--m-text-color-secondary);">基础底部弹出层示例。</view>
-      </view>
-    </m-popup>
-  </view>
-
-  <view class="demo-section">
-    <view class="demo-section__title">ActionSheet</view>
-    <button bindtap="onShowActionSheet">打开 ActionSheet</button>
-    <m-action-sheet
-      visible="{{actionSheetVisible}}"
-      actions="{{actionSheetActions}}"
-      bindselect="onSelectActionSheet"
-      bindclose="onCloseActionSheet"
+  <view class="section-title">Components</view>
+  <view class="component-grid">
+    <view
+      wx:for="{{components}}"
+      wx:key="id"
+      class="component-card"
+      data-id="{{item.id}}"
+      bindtap="onComponentTap"
     >
-      <view slot="title">请选择操作</view>
-    </m-action-sheet>
-  </view>
-
-  <view class="demo-section">
-    <view class="demo-section__title">List</view>
-    <m-list bordered>
-      <m-cell title="账号与安全" label="修改密码、手机号等信息" clickable arrow />
-      <m-cell title="通知设置" value="已开启" arrow />
-      <m-cell title="关于我们" value="v1.0.0" />
-    </m-list>
-  </view>
-
-  <view class="demo-section">
-    <view class="demo-section__title">Navbar</view>
-    <m-navbar title="页面标题" backable>
-      <view slot="right" style="font-size: 28rpx; color: var(--m-color-primary);">操作</view>
-    </m-navbar>
-  </view>
-
-  <view class="demo-section">
-    <view class="demo-section__title">Tabs</view>
-    <m-tabs tabs="{{tabs}}" active="{{tabsActive}}" bindchange="onChangeTabs">
-      <view wx:if="{{tabsActive === 0}}" style="padding: 32rpx;">推荐内容</view>
-      <view wx:elif="{{tabsActive === 1}}" style="padding: 32rpx;">热门内容</view>
-      <view wx:else style="padding: 32rpx;">最新内容</view>
-    </m-tabs>
-  </view>
-
-  <view class="demo-section">
-    <view class="demo-section__title">Tabbar</view>
-    <m-tabbar items="{{tabbarItems}}" active="{{tabbarActive}}" fixed="{{false}}" bindchange="onChangeTabbar" />
-  </view>
-
-  <view class="demo-section">
-    <view class="demo-section__title">Card</view>
-    <view class="demo-item">
-      <m-card title="账户信息" subtitle="基础资料">
-        <view>姓名：Maple</view>
-        <view style="margin-top: 12rpx;">状态：正常</view>
-      </m-card>
-    </view>
-    <view class="demo-item">
-      <m-card title="快捷操作" shadow>
-        <view>这是一个带阴影的卡片。</view>
-        <view slot="extra">更多</view>
-      </m-card>
+      <view class="component-card__top">
+        <view class="component-card__name">{{item.name}}</view>
+        <view class="component-card__arrow">›</view>
+      </view>
+      <view class="component-card__title">{{item.title}}</view>
+      <view class="component-card__desc">{{item.description}}</view>
     </view>
   </view>
+
+  <view class="home-footer-space"></view>
+  <m-tabbar items="{{tabbarItems}}" active="{{tabbarActive}}" fixed border="{{true}}" bindchange="onChangeTabbar" />
 </view>
