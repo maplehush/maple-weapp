@@ -5,6 +5,7 @@
     "m-loading": "/components/loading/index",
     "m-cell": "/components/cell/index",
     "m-input": "/components/input/index",
-    "m-textarea": "/components/textarea/index"
+    "m-textarea": "/components/textarea/index",
+    "m-switch": "/components/switch/index"
   }
 }
