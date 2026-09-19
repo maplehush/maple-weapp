@@ -54,4 +54,10 @@
     <m-cell title="通知设置" value="已开启" arrow />
     <m-cell title="禁用状态" value="不可操作" disabled />
   </view>
+  <view class="demo-section">
+    <view class="demo-section__title">Input</view>
+    <view class="demo-item"><m-input placeholder="请输入内容" clearable /></view>
+    <view class="demo-item"><m-input value="只读内容" readonly /></view>
+    <view class="demo-item"><m-input value="禁用内容" disabled /></view>
+  </view>
 </view>

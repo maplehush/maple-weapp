@@ -1,0 +1,22 @@
+<view class="m-input {{focused ? 'm-input--focused' : ''}} {{disabled ? 'm-input--disabled' : ''}} {{readonly ? 'm-input--readonly' : ''}}">
+  <input
+    class="m-input__control"
+    type="{{type}}"
+    value="{{value}}"
+    placeholder="{{placeholder}}"
+    placeholder-class="m-input__placeholder"
+    maxlength="{{maxlength}}"
+    disabled="{{disabled}}"
+    cursor-spacing="24"
+    bindfocus="onFocus"
+    bindinput="onInput"
+    bindblur="onBlur"
+  />
+
+  <view
+    wx:if="{{clearable && value && !disabled && !readonly}}"
+    class="m-input__clear"
+    aria-label="clear"
+    bindtap="onClear"
+  >×</view>
+</view>
