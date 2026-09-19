@@ -1,0 +1,1 @@
+<view class="m-list {{bordered ? 'm-list--bordered' : ''}} {{inset ? 'm-list--inset' : ''}}"><slot /></view>
