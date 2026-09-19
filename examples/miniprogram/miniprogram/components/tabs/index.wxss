@@ -1,0 +1,8 @@
+.demo-tabs__panel {
+  box-sizing: border-box;
+  min-height: 180rpx;
+  padding: var(--m-spacing-xl);
+  color: var(--m-text-color-secondary);
+  font-size: var(--m-font-size-medium);
+  line-height: var(--m-line-height-normal);
+}
