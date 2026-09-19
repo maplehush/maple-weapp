@@ -1,5 +1,0 @@
-.demo-radio {
-  display: flex;
-  flex-direction: column;
-  gap: var(--m-spacing-md);
-}

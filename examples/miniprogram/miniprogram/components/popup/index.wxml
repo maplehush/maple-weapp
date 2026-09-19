@@ -1,9 +1,0 @@
-<view class="demo-popup">
-  <button bindtap="onShow">打开 Popup</button>
-  <m-popup visible="{{visible}}" position="bottom" closeable bindclose="onClose">
-    <view class="demo-popup__content">
-      <view class="demo-popup__title">示例 Popup</view>
-      <view class="demo-popup__text">这是一个基础底部弹出层示例。</view>
-    </view>
-  </m-popup>
-</view>

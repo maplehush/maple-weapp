@@ -1,4 +1,0 @@
-<view class="demo-dialog">
-  <button bindtap="onShow">打开 Dialog</button>
-  <m-dialog visible="{{visible}}" title="确认操作" content="这是一个基础 Dialog 示例。" bindconfirm="onConfirm" bindcancel="onCancel" bindclose="onClose" />
-</view>

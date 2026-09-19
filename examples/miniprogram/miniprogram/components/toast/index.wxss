@@ -1,7 +1,0 @@
-.demo-toast {
-  min-height: 96rpx;
-}
-
-.demo-toast__actions {
-  margin-top: var(--m-spacing-xl);
-}
