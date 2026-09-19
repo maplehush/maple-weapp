@@ -122,4 +122,14 @@
     <view class="demo-section__title">Dialog</view>
     <m-dialog visible title="示例 Dialog" content="基础对话框示例。" />
   </view>
+
+  <view class="demo-section">
+    <view class="demo-section__title">Popup</view>
+    <m-popup visible position="bottom">
+      <view>
+        <view style="font-size: 32rpx; font-weight: 600; color: var(--m-text-color-primary); margin-bottom: 12rpx;">示例 Popup</view>
+        <view style="font-size: 28rpx; color: var(--m-text-color-secondary);">基础底部弹出层示例。</view>
+      </view>
+    </m-popup>
+  </view>
 </view>
