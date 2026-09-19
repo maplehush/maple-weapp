@@ -173,6 +173,11 @@
   </view>
 
   <view class="demo-section">
+    <view class="demo-section__title">Tabbar</view>
+    <m-tabbar items="{{tabbarItems}}" active="{{tabbarActive}}" fixed="{{false}}" bindchange="onChangeTabbar" />
+  </view>
+
+  <view class="demo-section">
     <view class="demo-section__title">Card</view>
     <view class="demo-item">
       <m-card title="账户信息" subtitle="基础资料">
