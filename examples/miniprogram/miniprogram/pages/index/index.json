@@ -15,6 +15,7 @@
     "m-popup": "/components/popup/index",
     "m-action-sheet": "/components/action-sheet/index",
     "m-card": "/components/card/index",
-    "m-list": "/components/list/index"
+    "m-list": "/components/list/index",
+    "m-tabs": "/components/tabs/index"
   }
 }
