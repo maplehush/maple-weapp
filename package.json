@@ -1,6 +1,6 @@
 {
   "name": "maple-weapp",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A lightweight UI component library for native WeChat Mini Programs.",
   "files": [
     "packages"
@@ -14,7 +14,20 @@
     "skyline"
   ],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maplehush/maple-weapp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/maplehush/maple-weapp/issues"
+  },
+  "homepage": "https://github.com/maplehush/maple-weapp",
   "devDependencies": {
     "miniprogram-api-typings": "^5.2.3"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "tsc -p tsconfig.test.json && node --test .test-dist/tests/*.test.js",
+    "release:check": "npm run typecheck && npm test && npm pack --dry-run"
   }
 }

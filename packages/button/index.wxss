@@ -24,12 +24,12 @@
   box-sizing: border-box;
   min-width: 160rpx;
   margin: 0;
-  padding: 0 32rpx;
+  padding: 0 var(--m-spacing-xl);
   border: 0;
-  border-radius: 16rpx;
-  font-size: 28rpx;
-  font-weight: 500;
-  line-height: 1.4;
+  border-radius: var(--m-radius-medium);
+  font-size: var(--m-font-size-medium);
+  font-weight: var(--m-font-weight-medium);
+  line-height: var(--m-line-height-tight);
   vertical-align: middle;
   overflow: hidden;
   transform: translateZ(0);
@@ -67,18 +67,18 @@
    ========================= */
 
 .m-button--default {
-  color: #1f2329;
-  background-color: #f2f3f5;
+  color: var(--m-text-color-primary);
+  background-color: var(--m-bg-color-secondary);
 }
 
 .m-button--primary {
-  color: #ffffff;
-  background-color: #1677ff;
+  color: var(--m-text-color-inverse);
+  background-color: var(--m-color-primary);
 }
 
 .m-button--danger {
-  color: #ffffff;
-  background-color: #e34d59;
+  color: var(--m-text-color-inverse);
+  background-color: var(--m-color-danger);
 }
 
 /* =========================
@@ -86,24 +86,24 @@
    ========================= */
 
 .m-button--small {
-  height: 64rpx;
+  height: var(--m-button-height-small);
   min-width: 128rpx;
-  padding: 0 24rpx;
-  border-radius: 12rpx;
-  font-size: 24rpx;
+  padding: 0 var(--m-spacing-lg);
+  border-radius: var(--m-radius-small);
+  font-size: var(--m-font-size-small);
 }
 
 .m-button--medium {
-  height: 80rpx;
-  font-size: 28rpx;
+  height: var(--m-button-height-medium);
+  font-size: var(--m-font-size-medium);
 }
 
 .m-button--large {
-  height: 96rpx;
+  height: var(--m-button-height-large);
   min-width: 192rpx;
-  padding: 0 40rpx;
-  border-radius: 20rpx;
-  font-size: 30rpx;
+  padding: 0 var(--m-button-padding-large);
+  border-radius: var(--m-button-radius-large);
+  font-size: var(--m-button-font-size-large);
 }
 
 /* =========================
@@ -121,7 +121,7 @@
    ========================= */
 
 .m-button--active {
-  opacity: 0.88;
+  opacity: var(--m-state-active-opacity);
   transform: scale(0.985);
 }
 
@@ -130,18 +130,18 @@
    ========================= */
 
 .m-button--default.m-button--disabled {
-  color: #c9cdd4;
-  background-color: #f7f8fa;
+  color: var(--m-text-color-disabled);
+  background-color: var(--m-bg-color-disabled);
 }
 
 .m-button--primary.m-button--disabled {
-  color: rgba(255, 255, 255, 0.72);
-  background-color: #94bfff;
+  color: var(--m-state-inverse-disabled);
+  background-color: var(--m-state-primary-disabled);
 }
 
 .m-button--danger.m-button--disabled {
-  color: rgba(255, 255, 255, 0.72);
-  background-color: #f3a6ad;
+  color: var(--m-state-inverse-disabled);
+  background-color: var(--m-state-danger-disabled);
 }
 
 .m-button--loading {
@@ -155,7 +155,7 @@
   flex-shrink: 0;
   width: 28rpx;
   height: 28rpx;
-  margin-right: 12rpx;
+  margin-right: var(--m-spacing-sm);
 }
 
 .m-button__loading-circle {
@@ -164,7 +164,7 @@
   height: 24rpx;
   border: 2rpx solid currentColor;
   border-bottom-color: transparent;
-  border-radius: 999rpx;
+  border-radius: var(--m-radius-round);
   animation: m-button-spin 0.8s linear infinite;
 }
 

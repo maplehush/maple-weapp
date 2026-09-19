@@ -1,13 +1,13 @@
 {
-  "name": "miniprogram-ts-less-quickstart",
+  "name": "maple-weapp-example",
   "version": "1.0.0",
-  "description": "",
+  "private": true,
+  "description": "Maple Weapp component showcase.",
   "scripts": {
+    "build:npm": "echo Use WeChat DevTools to build npm after npm install"
   },
-  "keywords": [],
-  "author": "",
-  "license": "",
   "dependencies": {
+    "maple-weapp": "file:../.."
   },
   "devDependencies": {
     "miniprogram-api-typings": "^2.8.3-1"

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "m-cell": "/miniprogram_npm/maple-weapp/packages/cell/index",
+    "m-tabbar": "/miniprogram_npm/maple-weapp/packages/tabbar/index"
+  }
+}

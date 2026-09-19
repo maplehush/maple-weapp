@@ -1,0 +1,41 @@
+.m-switch {
+  display: inline-block;
+  width: 96rpx;
+  height: 56rpx;
+  padding: 4rpx;
+  box-sizing: border-box;
+  border-radius: var(--m-radius-round);
+  background-color: var(--m-switch-inactive-color);
+  transition: opacity 0.12s ease;
+}
+
+.m-switch__track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.m-switch__thumb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 48rpx;
+  height: 48rpx;
+  border-radius: var(--m-radius-round);
+  background-color: var(--m-bg-color-container);
+  box-shadow: 0 2rpx 6rpx rgba(0, 0, 0, 0.12);
+  transition: transform 0.16s ease;
+}
+
+.m-switch--checked {
+  background-color: var(--m-switch-active-color);
+}
+
+.m-switch--checked .m-switch__thumb {
+  transform: translateX(40rpx);
+}
+
+.m-switch--disabled {
+  opacity: var(--m-state-disabled-opacity);
+}

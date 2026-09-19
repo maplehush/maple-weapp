@@ -1,0 +1,87 @@
+.profile-page {
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 48rpx 32rpx 0;
+  background: var(--m-bg-color-page);
+}
+.profile-header {
+  display: flex;
+  align-items: center;
+  padding: 12rpx 8rpx 40rpx;
+}
+.profile-avatar {
+  width: 112rpx;
+  height: 112rpx;
+  margin-right: 24rpx;
+  border-radius: 56rpx;
+  background: var(--m-color-primary);
+  color: var(--m-text-color-inverse);
+  font-size: 48rpx;
+  font-weight: var(--m-font-weight-semibold);
+  line-height: 112rpx;
+  text-align: center;
+}
+.profile-name {
+  color: var(--m-text-color-primary);
+  font-size: 36rpx;
+  font-weight: var(--m-font-weight-semibold);
+}
+.profile-desc {
+  margin-top: 8rpx;
+  color: var(--m-text-color-secondary);
+  font-size: 24rpx;
+}
+.profile-stats {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 24rpx;
+  padding: 28rpx 12rpx;
+  border-radius: var(--m-radius-medium);
+  background: var(--m-bg-color-container);
+}
+.stat-item {
+  min-width: 120rpx;
+  text-align: center;
+}
+.stat-number {
+  color: var(--m-text-color-primary);
+  font-size: 28rpx;
+  font-weight: var(--m-font-weight-semibold);
+}
+.stat-label {
+  margin-top: 8rpx;
+  color: var(--m-text-color-secondary);
+  font-size: 22rpx;
+}
+.stat-divider {
+  width: 1rpx;
+  height: 48rpx;
+  background: var(--m-border-color);
+}
+.profile-card {
+  margin-bottom: 24rpx;
+  padding: 28rpx 32rpx;
+  border-radius: var(--m-radius-medium);
+  background: var(--m-bg-color-container);
+}
+.profile-card-title {
+  margin-bottom: 12rpx;
+  color: var(--m-text-color-primary);
+  font-size: 30rpx;
+  font-weight: var(--m-font-weight-semibold);
+}
+.profile-card-text {
+  color: var(--m-text-color-secondary);
+  font-size: 25rpx;
+  line-height: 1.6;
+}
+.profile-tip {
+  margin: 28rpx 8rpx 0;
+  color: var(--m-text-color-placeholder);
+  font-size: 22rpx;
+  line-height: 1.6;
+}
+.profile-footer-space {
+  height: 160rpx;
+}

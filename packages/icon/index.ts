@@ -33,7 +33,7 @@ Component({
 
     size: { type: Number, value: 32 },
 
-    color: { type: String, value: '' }
+    color: { type: String, value: 'var(--m-color-primary)' }
   },
 
   methods: {

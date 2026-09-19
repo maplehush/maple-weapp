@@ -1,0 +1,15 @@
+<view class="m-tabbar {{fixed ? 'm-tabbar--fixed' : ''}} {{border ? 'm-tabbar--border' : ''}}">
+  <view
+    wx:for="{{items}}"
+    wx:key="index"
+    class="m-tabbar__item {{index === active ? 'm-tabbar__item--active' : ''}}"
+    data-index="{{index}}"
+    bindtap="onItemTap"
+  >
+    <view wx:if="{{item.icon}}" class="m-tabbar__icon">
+      <m-icon name="{{item.icon}}" size="40" />
+    </view>
+    <view class="m-tabbar__label">{{item.label}}</view>
+    <view wx:if="{{item.badge}}" class="m-tabbar__badge">{{item.badge}}</view>
+  </view>
+</view>

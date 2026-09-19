@@ -1,0 +1,27 @@
+<view class="profile-page">
+  <view class="profile-header">
+    <view class="profile-avatar">M</view>
+    <view class="profile-info">
+      <view class="profile-name">Maple Weapp</view>
+      <view class="profile-desc">Native WeChat Mini Program UI</view>
+    </view>
+  </view>
+  <view class="profile-stats">
+    <view class="stat-item"><view class="stat-number">19</view><view class="stat-label">组件</view></view>
+    <view class="stat-divider"></view>
+    <view class="stat-item"><view class="stat-number">MIT</view><view class="stat-label">License</view></view>
+    <view class="stat-divider"></view>
+    <view class="stat-item"><view class="stat-number">0.0.1</view><view class="stat-label">版本</view></view>
+  </view>
+  <view class="profile-card">
+    <view class="profile-card-title">关于项目</view>
+    <view class="profile-card-text">Maple Weapp 是一个轻量的原生微信小程序组件库，提供基础组件、交互组件与共享 Design Token。</view>
+  </view>
+  <m-cell title="组件数量" value="19 个" />
+  <m-cell title="设计 Token" value="已接入" />
+  <m-cell title="运行方式" value="原生小程序" />
+  <m-cell title="开源协议" value="MIT" />
+  <view class="profile-tip">示例页面仅用于组件展示与开发调试，不连接任何后端服务。</view>
+  <view class="profile-footer-space"></view>
+  <m-tabbar items="{{tabbarItems}}" active="{{tabbarActive}}" fixed border="{{true}}" bindchange="onChangeTabbar" />
+</view>

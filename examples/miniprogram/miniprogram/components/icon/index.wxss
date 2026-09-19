@@ -1,6 +1,0 @@
-@import "./iconfont.wxss";
-
-.m-icon {
-  display: inline-block;
-  vertical-align: middle;
-}
