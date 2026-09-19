@@ -1,1 +1,7 @@
-{"component":true,"styleIsolation":"apply-shared","usingComponents":{"m-icon":"/components/icon/index"}}
+{
+  "component": true,
+  "styleIsolation": "apply-shared",
+  "usingComponents": {
+    "m-icon": "../icon/index"
+  }
+}
