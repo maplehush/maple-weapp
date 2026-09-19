@@ -1,4 +1,8 @@
 Component({
+  data: {
+    focused: false
+  },
+
   properties: {
     value: { type: String, value: '' },
     placeholder: { type: String, value: '' },
@@ -10,7 +14,7 @@ Component({
   },
 
   methods: {
-    onInput(event: WechatMiniprogram.Input) {
+    onInput(event: any) {
       const value = event.detail.value
 
       if (this.data.readonly) {
@@ -22,7 +26,7 @@ Component({
       this.triggerEvent('input', { value })
     },
 
-    onBlur(event: WechatMiniprogram.InputBlur) {
+    onBlur(event: anyBlur) {
       this.triggerEvent('blur', { value: event.detail.value })
     },
 
