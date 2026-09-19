@@ -151,3 +151,61 @@ test('Toast auto closes and can clean up its timer', async () => {
   assert.deepEqual(events[0], { name: 'close', detail: undefined })
   detached()
 })
+
+test('Cell emits click only when clickable and enabled', () => {
+  const definition = loadComponent('packages/cell/index.js')
+  const { instance, events } = createInstance(definition, { clickable: false, disabled: false })
+  instance.onTap()
+  assert.equal(events.length, 0)
+
+  instance.data.clickable = true
+  instance.data.disabled = true
+  instance.onTap()
+  assert.equal(events.length, 0)
+
+  instance.data.disabled = false
+  instance.onTap()
+  assert.deepEqual(events[0], { name: 'click', detail: undefined })
+})
+
+test('Tag close is blocked when disabled', () => {
+  const definition = loadComponent('packages/tag/index.js')
+  const { instance, events } = createInstance(definition, { disabled: true })
+  instance.onClose()
+  assert.equal(events.length, 0)
+
+  instance.data.disabled = false
+  instance.onClose()
+  assert.deepEqual(events[0], { name: 'close', detail: undefined })
+})
+
+test('Loading exposes stable defaults', () => {
+  const definition = loadComponent('packages/loading/index.js')
+  assert.equal(definition.properties.size.value, 32)
+  assert.equal(definition.properties.color.value, 'var(--m-color-primary)')
+  assert.equal(definition.properties.text.value, '')
+})
+
+test('Dialog mask close obeys closeOnMaskTap', () => {
+  const definition = loadComponent('packages/dialog/index.js')
+  const { instance, events } = createInstance(definition, { visible: true, closeOnMaskTap: false })
+  instance.onMaskTap()
+  assert.equal(instance.data.visible, true)
+  assert.equal(events.length, 0)
+
+  instance.data.closeOnMaskTap = true
+  instance.onMaskTap()
+  assert.equal(instance.data.visible, false)
+  assert.deepEqual(events[0], { name: 'close', detail: undefined })
+})
+
+test('ActionSheet cancel emits cancel then close', () => {
+  const definition = loadComponent('packages/action-sheet/index.js')
+  const { instance, events } = createInstance(definition, { visible: true })
+  instance.onCancel()
+  assert.deepEqual(events, [
+    { name: 'cancel', detail: undefined },
+    { name: 'close', detail: undefined }
+  ])
+})
+
