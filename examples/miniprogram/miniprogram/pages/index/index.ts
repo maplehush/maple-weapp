@@ -5,6 +5,12 @@ const app = getApp<IAppOption>();
 Component({
   data: {
     popupVisible: false,
+    tabs: [
+      { title: "推荐" },
+      { title: "热门" },
+      { title: "最新" }
+    ],
+    tabsActive: 0,
     actionSheetVisible: false,
     actionSheetActions: [
       { name: '分享' },
@@ -13,6 +19,9 @@ Component({
     ]
   },
   methods: {
+    onChangeTabs(event: any) {
+      this.setData({ tabsActive: event.detail.index })
+    },
     onShowPopup() {
       this.setData({ popupVisible: true })
     },
