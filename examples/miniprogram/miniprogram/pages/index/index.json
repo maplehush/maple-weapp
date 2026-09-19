@@ -17,6 +17,7 @@
     "m-card": "/components/card/index",
     "m-list": "/components/list/index",
     "m-tabs": "/components/tabs/index",
-    "m-navbar": "/components/navbar/index"
+    "m-navbar": "/components/navbar/index",
+    "m-tabbar": "/components/tabbar/index"
   }
 }
