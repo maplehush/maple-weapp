@@ -60,4 +60,11 @@
     <view class="demo-item"><m-input value="只读内容" readonly /></view>
     <view class="demo-item"><m-input value="禁用内容" disabled /></view>
   </view>
+
+  <view class="demo-section">
+    <view class="demo-section__title">Textarea</view>
+    <view class="demo-item"><m-textarea placeholder="请输入多行内容" show-count clearable /></view>
+    <view class="demo-item"><m-textarea value="只读多行内容" readonly /></view>
+    <view class="demo-item"><m-textarea value="禁用多行内容" disabled /></view>
+  </view>
 </view>
