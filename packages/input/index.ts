@@ -26,7 +26,12 @@ Component({
       this.triggerEvent('input', { value })
     },
 
-    onBlur(event: anyBlur) {
+    onFocus() {
+      this.setData({ focused: true })
+    },
+
+    onBlur(event: any) {
+      this.setData({ focused: false })
       this.triggerEvent('blur', { value: event.detail.value })
     },
 
