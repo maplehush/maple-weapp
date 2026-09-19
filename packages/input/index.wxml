@@ -1,4 +1,4 @@
-<view class="m-input {{disabled ? 'm-input--disabled' : ''}} {{readonly ? 'm-input--readonly' : ''}}">
+<view class="m-input {{focused ? 'm-input--focused' : ''}} {{disabled ? 'm-input--disabled' : ''}} {{readonly ? 'm-input--readonly' : ''}}">
   <input
     class="m-input__control"
     type="{{type}}"
@@ -8,6 +8,7 @@
     maxlength="{{maxlength}}"
     disabled="{{disabled}}"
     cursor-spacing="24"
+    bindfocus="onFocus"
     bindinput="onInput"
     bindblur="onBlur"
   />
