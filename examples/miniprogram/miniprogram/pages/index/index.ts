@@ -5,6 +5,12 @@ const app = getApp<IAppOption>();
 Component({
   data: {
     popupVisible: false,
+    tabbarItems: [
+      { label: "首页", icon: "search" },
+      { label: "消息", icon: "check", badge: "3" },
+      { label: "我的", icon: "edit" }
+    ],
+    tabbarActive: 0,
     tabs: [
       { title: "推荐" },
       { title: "热门" },
@@ -19,6 +25,9 @@ Component({
     ]
   },
   methods: {
+    onChangeTabbar(event: any) {
+      this.setData({ tabbarActive: event.detail.index })
+    },
     onChangeTabs(event: any) {
       this.setData({ tabsActive: event.detail.index })
     },
