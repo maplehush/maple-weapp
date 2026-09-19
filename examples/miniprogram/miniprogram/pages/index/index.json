@@ -6,6 +6,7 @@
     "m-cell": "/components/cell/index",
     "m-input": "/components/input/index",
     "m-textarea": "/components/textarea/index",
-    "m-switch": "/components/switch/index"
+    "m-switch": "/components/switch/index",
+    "m-checkbox": "/components/checkbox/index"
   }
 }

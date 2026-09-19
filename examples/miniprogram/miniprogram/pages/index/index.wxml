@@ -54,6 +54,7 @@
     <m-cell title="通知设置" value="已开启" arrow />
     <m-cell title="禁用状态" value="不可操作" disabled />
   </view>
+
   <view class="demo-section">
     <view class="demo-section__title">Input</view>
     <view class="demo-item"><m-input placeholder="请输入内容" clearable /></view>
@@ -75,6 +76,17 @@
       <m-switch checked />
       <m-switch disabled />
       <m-switch checked disabled />
+    </view>
+  </view>
+
+  <view class="demo-section">
+    <view class="demo-section__title">Checkbox</view>
+    <view class="demo-row">
+      <m-checkbox>未选中</m-checkbox>
+      <m-checkbox checked>已选中</m-checkbox>
+      <m-checkbox indeterminate>半选</m-checkbox>
+      <m-checkbox disabled>禁用</m-checkbox>
+      <m-checkbox checked disabled>禁用选中</m-checkbox>
     </view>
   </view>
 </view>
