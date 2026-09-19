@@ -1,0 +1,6 @@
+<view class="demo-radio">
+  <m-radio>未选中</m-radio>
+  <m-radio checked>已选中</m-radio>
+  <m-radio disabled>禁用</m-radio>
+  <m-radio checked disabled>禁用选中</m-radio>
+</view>
