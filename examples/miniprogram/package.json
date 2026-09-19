@@ -1,0 +1,15 @@
+{
+  "name": "maple-weapp-example",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Maple Weapp component showcase.",
+  "scripts": {
+    "build:npm": "echo Use WeChat DevTools to build npm after npm install"
+  },
+  "dependencies": {
+    "maple-weapp": "file:../.."
+  },
+  "devDependencies": {
+    "miniprogram-api-typings": "^2.8.3-1"
+  }
+}
