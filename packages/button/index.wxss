@@ -101,9 +101,9 @@
 .m-button--large {
   height: var(--m-button-height-large);
   min-width: 192rpx;
-  padding: 0 40rpx;
-  border-radius: 20rpx;
-  font-size: 30rpx;
+  padding: 0 var(--m-button-padding-large);
+  border-radius: var(--m-button-radius-large);
+  font-size: var(--m-button-font-size-large);
 }
 
 /* =========================
