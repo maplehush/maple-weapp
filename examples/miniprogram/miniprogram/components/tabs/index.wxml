@@ -1,0 +1,5 @@
+<m-tabs tabs="{{tabs}}" active="{{active}}" bindchange="onChange">
+  <view wx:if="{{active === 0}}" class="demo-tabs__panel">推荐内容</view>
+  <view wx:elif="{{active === 1}}" class="demo-tabs__panel">热门内容</view>
+  <view wx:else class="demo-tabs__panel">最新内容</view>
+</m-tabs>
