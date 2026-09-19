@@ -10,6 +10,7 @@
     "m-checkbox": "/components/checkbox/index",
     "m-radio": "/components/radio/index",
     "m-tag": "/components/tag/index",
-    "m-toast": "/components/toast/index"
+    "m-toast": "/components/toast/index",
+    "m-dialog": "/components/dialog/index"
   }
 }

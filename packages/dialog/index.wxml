@@ -1,0 +1,12 @@
+<view wx:if="{{visible}}" class="m-dialog">
+  <view class="m-dialog__mask" bindtap="onMaskTap"></view>
+  <view class="m-dialog__container" role="dialog" aria-modal="true" catchtap="noop">
+    <view wx:if="{{title}}" class="m-dialog__title">{{title}}</view>
+    <view wx:if="{{content}}" class="m-dialog__content">{{content}}</view>
+    <view class="m-dialog__body"><slot /></view>
+    <view class="m-dialog__footer">
+      <button wx:if="{{showCancel}}" class="m-dialog__button m-dialog__button--cancel" bindtap="onCancel">{{cancelText}}</button>
+      <button class="m-dialog__button m-dialog__button--confirm" bindtap="onConfirm">{{confirmText}}</button>
+    </view>
+  </view>
+</view>

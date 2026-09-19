@@ -1,0 +1,75 @@
+.m-dialog {
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+}
+
+.m-dialog__mask {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+}
+
+.m-dialog__container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 640rpx;
+  max-width: calc(100% - 64rpx);
+  box-sizing: border-box;
+  border-radius: var(--m-radius-large);
+  background-color: var(--m-bg-color-container);
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+.m-dialog__title {
+  padding: var(--m-spacing-xl) var(--m-spacing-xl) var(--m-spacing-md);
+  color: var(--m-text-color-primary);
+  font-size: var(--m-font-size-large);
+  font-weight: var(--m-font-weight-semibold);
+  line-height: var(--m-line-height-tight);
+  text-align: center;
+}
+
+.m-dialog__content {
+  padding: var(--m-spacing-md) var(--m-spacing-xl);
+  color: var(--m-text-color-secondary);
+  font-size: var(--m-font-size-medium);
+  line-height: var(--m-line-height-normal);
+  text-align: center;
+}
+
+.m-dialog__body {
+  padding: var(--m-spacing-lg) var(--m-spacing-xl);
+  color: var(--m-text-color-secondary);
+  font-size: var(--m-font-size-medium);
+  line-height: var(--m-line-height-normal);
+}
+
+.m-dialog__footer {
+  display: flex;
+  border-top: 1rpx solid var(--m-border-color);
+}
+
+.m-dialog__button {
+  flex: 1;
+  height: 88rpx;
+  margin: 0;
+  padding: 0 var(--m-spacing-lg);
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  font-size: var(--m-font-size-medium);
+  line-height: 88rpx;
+}
+
+.m-dialog__button::after { border: 0; }
+.m-dialog__button--cancel { color: var(--m-text-color-secondary); }
+.m-dialog__button--confirm {
+  color: var(--m-color-primary);
+  font-weight: var(--m-font-weight-medium);
+}
+.m-dialog__button + .m-dialog__button {
+  border-left: 1rpx solid var(--m-border-color);
+}
