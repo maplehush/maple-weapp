@@ -16,6 +16,7 @@
     "m-action-sheet": "/components/action-sheet/index",
     "m-card": "/components/card/index",
     "m-list": "/components/list/index",
-    "m-tabs": "/components/tabs/index"
+    "m-tabs": "/components/tabs/index",
+    "m-navbar": "/components/navbar/index"
   }
 }
