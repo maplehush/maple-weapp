@@ -1,23 +1,5 @@
 {
   "usingComponents": {
-    "m-button": "/components/button/index",
-    "m-icon": "/components/icon/index",
-    "m-loading": "/components/loading/index",
-    "m-cell": "/components/cell/index",
-    "m-input": "/components/input/index",
-    "m-textarea": "/components/textarea/index",
-    "m-switch": "/components/switch/index",
-    "m-checkbox": "/components/checkbox/index",
-    "m-radio": "/components/radio/index",
-    "m-tag": "/components/tag/index",
-    "m-toast": "/components/toast/index",
-    "m-dialog": "/components/dialog/index",
-    "m-popup": "/components/popup/index",
-    "m-action-sheet": "/components/action-sheet/index",
-    "m-card": "/components/card/index",
-    "m-list": "/components/list/index",
-    "m-tabs": "/components/tabs/index",
-    "m-navbar": "/components/navbar/index",
-    "m-tabbar": "/components/tabbar/index"
+    "m-tabbar": "/miniprogram_npm/maple-weapp/packages/tabbar/index"
   }
 }
