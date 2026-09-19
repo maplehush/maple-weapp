@@ -1,6 +1,7 @@
 Component({
   properties: {
     active: { type: Number, value: 0 },
+    items: { type: Array, value: [] },
     fixed: { type: Boolean, value: true },
     border: { type: Boolean, value: true }
   },
