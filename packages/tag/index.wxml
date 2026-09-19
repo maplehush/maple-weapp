@@ -1,0 +1,11 @@
+<view
+  class="m-tag m-tag--{{type}} m-tag--{{size}} {{plain ? 'm-tag--plain' : ''}} {{disabled ? 'm-tag--disabled' : ''}}"
+>
+  <view class="m-tag__content"><slot /></view>
+  <view
+    wx:if="{{closable}}"
+    class="m-tag__close"
+    aria-label="close"
+    bindtap="onClose"
+  >×</view>
+</view>

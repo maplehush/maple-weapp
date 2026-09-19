@@ -99,4 +99,17 @@
       <m-radio checked disabled>禁用选中</m-radio>
     </view>
   </view>
+
+  <view class="demo-section">
+    <view class="demo-section__title">Tag</view>
+    <view class="demo-item"><m-tag>默认</m-tag></view>
+    <view class="demo-row">
+      <m-tag type="primary">主要</m-tag>
+      <m-tag type="success">成功</m-tag>
+      <m-tag type="warning">警告</m-tag>
+      <m-tag type="danger">危险</m-tag>
+      <m-tag plain closable>可关闭</m-tag>
+      <m-tag disabled closable>禁用</m-tag>
+    </view>
+  </view>
 </view>
