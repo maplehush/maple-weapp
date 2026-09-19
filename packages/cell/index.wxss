@@ -12,7 +12,7 @@
 }
 
 .m-cell--disabled {
-  opacity: 0.5;
+  opacity: var(--m-state-disabled-opacity);
 }
 
 .m-cell__body {

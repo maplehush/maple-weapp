@@ -26,6 +26,7 @@ page {
   --m-state-danger-disabled: #f3a6ad;
   --m-state-inverse-disabled: rgba(255, 255, 255, 0.72);
   --m-state-active-opacity: 0.88;
+  --m-state-disabled-opacity: 0.5;
 
   /* Radius */
   --m-radius-small: 8rpx;
@@ -60,4 +61,7 @@ page {
   --m-button-height-large: 96rpx;
   --m-cell-padding-y: 24rpx;
   --m-cell-padding-x: 32rpx;
+  --m-button-padding-large: 40rpx;
+  --m-button-radius-large: 20rpx;
+  --m-button-font-size-large: 30rpx;
 }
