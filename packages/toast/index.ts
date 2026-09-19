@@ -1,3 +1,5 @@
+const timers = new WeakMap<object, ReturnType<typeof setTimeout>>()
+
 Component({
   properties: {
     visible: { type: Boolean, value: false },
@@ -10,10 +12,12 @@ Component({
     'visible, duration': function(visible: boolean, duration: number) {
       if (!visible || duration <= 0) return
       this.clearTimer()
-      this.timer = setTimeout(() => {
+      const timer = setTimeout(() => {
         this.setData({ visible: false })
         this.triggerEvent('close')
+        timers.delete(this)
       }, duration)
+      timers.set(this, timer)
     }
   },
 
@@ -24,12 +28,11 @@ Component({
   },
 
   methods: {
-    timer: null as ReturnType<typeof setTimeout> | null,
-
     clearTimer() {
-      if (this.timer) {
-        clearTimeout(this.timer)
-        this.timer = null
+      const timer = timers.get(this)
+      if (timer) {
+        clearTimeout(timer)
+        timers.delete(this)
       }
     }
   }
