@@ -146,4 +146,20 @@
       <view slot="title">请选择操作</view>
     </m-action-sheet>
   </view>
+
+  <view class="demo-section">
+    <view class="demo-section__title">Card</view>
+    <view class="demo-item">
+      <m-card title="账户信息" subtitle="基础资料">
+        <view>姓名：Maple</view>
+        <view style="margin-top: 12rpx;">状态：正常</view>
+      </m-card>
+    </view>
+    <view class="demo-item">
+      <m-card title="快捷操作" shadow>
+        <view>这是一个带阴影的卡片。</view>
+        <view slot="extra">更多</view>
+      </m-card>
+    </view>
+  </view>
 </view>
