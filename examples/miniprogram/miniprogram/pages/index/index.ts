@@ -3,6 +3,15 @@
 const app = getApp<IAppOption>();
 
 Component({
-  data: {},
-  methods: {},
+  data: {
+    popupVisible: false
+  },
+  methods: {
+    onShowPopup() {
+      this.setData({ popupVisible: true })
+    },
+    onClosePopup() {
+      this.setData({ popupVisible: false })
+    }
+  },
 });
