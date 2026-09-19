@@ -10,7 +10,7 @@ Component({
     onChangeTabbar(event: any) {
       const index = Number(event.detail.index)
       this.setData({ tabbarActive: index })
-      if (index === 0) wx.switchTab({ url: '/pages/index/index' })
+      if (index === 0) wx.reLaunch({ url: '/pages/index/index' })
     }
   }
 })
