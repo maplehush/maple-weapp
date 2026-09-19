@@ -1,0 +1,14 @@
+<view class="m-tabs {{sticky ? 'm-tabs--sticky' : ''}}">
+  <view class="m-tabs__nav">
+    <view
+      wx:for="{{tabs}}"
+      wx:key="index"
+      class="m-tabs__tab {{index === active ? 'm-tabs__tab--active' : ''}}"
+      data-index="{{index}}"
+      bindtap="onTabTap"
+    >
+      {{item.title}}
+    </view>
+  </view>
+  <view class="m-tabs__content"><slot /></view>
+</view>
