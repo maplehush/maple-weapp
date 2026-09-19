@@ -12,6 +12,7 @@
     "m-tag": "/components/tag/index",
     "m-toast": "/components/toast/index",
     "m-dialog": "/components/dialog/index",
-    "m-popup": "/components/popup/index"
+    "m-popup": "/components/popup/index",
+    "m-action-sheet": "/components/action-sheet/index"
   }
 }
