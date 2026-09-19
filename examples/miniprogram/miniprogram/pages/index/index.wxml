@@ -67,4 +67,14 @@
     <view class="demo-item"><m-textarea value="只读多行内容" readonly /></view>
     <view class="demo-item"><m-textarea value="禁用多行内容" disabled /></view>
   </view>
+
+  <view class="demo-section">
+    <view class="demo-section__title">Switch</view>
+    <view class="demo-row">
+      <m-switch />
+      <m-switch checked />
+      <m-switch disabled />
+      <m-switch checked disabled />
+    </view>
+  </view>
 </view>
