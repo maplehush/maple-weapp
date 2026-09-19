@@ -7,7 +7,7 @@
     "build:npm": "echo Use WeChat DevTools to build npm after npm install"
   },
   "dependencies": {
-    "maple-weapp": "file:../.."
+    "maple-weapp": "file:../../maple-weapp-0.1.0.tgz"
   },
   "devDependencies": {
     "miniprogram-api-typings": "^2.8.3-1"
