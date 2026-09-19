@@ -1,0 +1,87 @@
+.detail-page {
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 24rpx 32rpx 48rpx;
+  background: var(--m-bg-color-page);
+}
+.detail-header {
+  display: flex;
+  align-items: center;
+  gap: 18rpx;
+  padding: 20rpx 0 32rpx;
+}
+.detail-back {
+  width: 64rpx;
+  height: 64rpx;
+  border-radius: 32rpx;
+  background: var(--m-bg-color-container);
+  color: var(--m-text-color-primary);
+  font-size: 48rpx;
+  line-height: 58rpx;
+  text-align: center;
+}
+.detail-name {
+  color: var(--m-color-primary);
+  font-size: 24rpx;
+  font-weight: var(--m-font-weight-semibold);
+}
+.detail-title {
+  margin-top: 4rpx;
+  color: var(--m-text-color-primary);
+  font-size: 38rpx;
+  font-weight: var(--m-font-weight-semibold);
+}
+.detail-card {
+  margin-bottom: 20rpx;
+  padding: 28rpx 32rpx;
+  border: 1rpx solid var(--m-border-color);
+  border-radius: var(--m-radius-medium);
+  background: var(--m-bg-color-container);
+}
+.detail-section-title {
+  margin-bottom: 16rpx;
+  color: var(--m-text-color-primary);
+  font-size: 28rpx;
+  font-weight: var(--m-font-weight-semibold);
+}
+.detail-description,
+.prop-text {
+  color: var(--m-text-color-secondary);
+  font-size: 26rpx;
+  line-height: 1.6;
+}
+.prop-row {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 12rpx;
+}
+.prop-dot {
+  width: 8rpx;
+  height: 8rpx;
+  margin: 12rpx 14rpx 0 0;
+  border-radius: 50%;
+  background: var(--m-color-primary);
+}
+.code-block {
+  padding: 24rpx;
+  border-radius: var(--m-radius-small);
+  background: var(--m-bg-color-secondary);
+  color: var(--m-text-color-primary);
+  font-size: 23rpx;
+  line-height: 1.6;
+  word-break: break-all;
+}
+.empty-page {
+  padding: 160rpx 48rpx;
+  text-align: center;
+  background: var(--m-bg-color-page);
+}
+.empty-title {
+  color: var(--m-text-color-primary);
+  font-size: 32rpx;
+}
+.empty-link {
+  margin-top: 24rpx;
+  color: var(--m-color-primary);
+  font-size: 26rpx;
+}
