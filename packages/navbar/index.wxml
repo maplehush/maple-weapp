@@ -1,0 +1,8 @@
+<view class="m-navbar {{fixed ? 'm-navbar--fixed' : ''}} {{border ? 'm-navbar--border' : ''}}">
+  <view class="m-navbar__left">
+    <view wx:if="{{backable}}" class="m-navbar__back" aria-label="返回" bindtap="onBack">‹</view>
+    <slot name="left" />
+  </view>
+  <view class="m-navbar__title">{{title}}<slot /></view>
+  <view class="m-navbar__right"><slot name="right" /></view>
+</view>
