@@ -1,0 +1,28 @@
+<view wx:if="{{doc}}" class="detail-page">
+  <view class="detail-header">
+    <view class="detail-back" bindtap="onBack">‹</view>
+    <view>
+      <view class="detail-name">{{doc.name}}</view>
+      <view class="detail-title">{{doc.title}}</view>
+    </view>
+  </view>
+  <view class="detail-card">
+    <view class="detail-section-title">介绍</view>
+    <view class="detail-description">{{doc.description}}</view>
+  </view>
+  <view class="detail-card">
+    <view class="detail-section-title">Props</view>
+    <view wx:for="{{doc.props}}" wx:key="index" class="prop-row">
+      <view class="prop-dot"></view>
+      <view class="prop-text">{{item}}</view>
+    </view>
+  </view>
+  <view class="detail-card">
+    <view class="detail-section-title">使用</view>
+    <view class="code-block"><text selectable>{{doc.usage}}</text></view>
+  </view>
+</view>
+<view wx:else class="empty-page">
+  <view class="empty-title">组件不存在</view>
+  <view class="empty-link" bindtap="onBack">返回组件列表</view>
+</view>
