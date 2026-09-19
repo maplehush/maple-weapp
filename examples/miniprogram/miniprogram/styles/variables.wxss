@@ -10,24 +10,43 @@ page {
   --m-text-color-secondary: #4e5969;
   --m-text-color-placeholder: #86909c;
   --m-text-color-disabled: #c9cdd4;
+  --m-text-color-inverse: #ffffff;
 
   /* Background */
   --m-bg-color-page: #f7f8fa;
   --m-bg-color-container: #ffffff;
   --m-bg-color-secondary: #f2f3f5;
+  --m-bg-color-disabled: #f7f8fa;
 
   /* Border */
   --m-border-color: #e5e6eb;
+
+  /* Interaction */
+  --m-state-primary-disabled: #94bfff;
+  --m-state-danger-disabled: #f3a6ad;
+  --m-state-inverse-disabled: rgba(255, 255, 255, 0.72);
+  --m-state-active-opacity: 0.88;
+  --m-state-disabled-opacity: 0.5;
 
   /* Radius */
   --m-radius-small: 8rpx;
   --m-radius-medium: 16rpx;
   --m-radius-large: 24rpx;
+  --m-radius-round: 999rpx;
 
   /* Font size */
   --m-font-size-small: 24rpx;
   --m-font-size-medium: 28rpx;
   --m-font-size-large: 32rpx;
+
+  /* Font weight */
+  --m-font-weight-regular: 400;
+  --m-font-weight-medium: 500;
+  --m-font-weight-semibold: 600;
+
+  /* Line height */
+  --m-line-height-normal: 1.5;
+  --m-line-height-tight: 1.4;
 
   /* Spacing */
   --m-spacing-xs: 8rpx;
@@ -35,4 +54,14 @@ page {
   --m-spacing-md: 16rpx;
   --m-spacing-lg: 24rpx;
   --m-spacing-xl: 32rpx;
+
+  /* Component dimensions */
+  --m-button-height-small: 64rpx;
+  --m-button-height-medium: 80rpx;
+  --m-button-height-large: 96rpx;
+  --m-cell-padding-y: 24rpx;
+  --m-cell-padding-x: 32rpx;
+  --m-button-padding-large: 40rpx;
+  --m-button-radius-large: 20rpx;
+  --m-button-font-size-large: 30rpx;
 }
