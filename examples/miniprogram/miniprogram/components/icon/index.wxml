@@ -1,5 +1,6 @@
 <text
   class="m-icon m-icon-{{name}}"
   style="font-size: {{size}}rpx; color: {{color}};"
+  aria-hidden="true"
   bindtap="onTap"
 ></text>
