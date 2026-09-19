@@ -133,4 +133,17 @@
       </view>
     </m-popup>
   </view>
+
+  <view class="demo-section">
+    <view class="demo-section__title">ActionSheet</view>
+    <button bindtap="onShowActionSheet">打开 ActionSheet</button>
+    <m-action-sheet
+      visible="{{actionSheetVisible}}"
+      actions="{{actionSheetActions}}"
+      bindselect="onSelectActionSheet"
+      bindclose="onCloseActionSheet"
+    >
+      <view slot="title">请选择操作</view>
+    </m-action-sheet>
+  </view>
 </view>
