@@ -16,9 +16,10 @@
     "minified": false,
     "enhance": true,
     "showShadowRootInWxmlPanel": false,
+    "packNpmManually": true,
     "packNpmRelationList": [
       {
-        "packageJsonPath": "./package.json",
+        "packageJsonPath": "./miniprogram/package.json",
         "miniprogramNpmDistDir": "./miniprogram/"
       }
     ],
@@ -28,7 +29,6 @@
     "es6": true,
     "uglifyFileName": false,
     "uploadWithSourceMap": true,
-    "packNpmManually": true,
     "minifyWXSS": true,
     "localPlugins": false,
     "condition": false,
