@@ -1,0 +1,12 @@
+<view class="demo-action-sheet">
+  <button bindtap="onShow">打开 ActionSheet</button>
+  <m-action-sheet
+    visible="{{visible}}"
+    actions="{{actions}}"
+    bindselect="onSelect"
+    bindcancel="onCancel"
+    bindclose="onClose"
+  >
+    <view slot="title">请选择操作</view>
+  </m-action-sheet>
+</view>
