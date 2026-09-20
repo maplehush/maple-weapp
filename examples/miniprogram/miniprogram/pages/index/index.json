@@ -1,5 +1,6 @@
 {
+  "disableScroll": true,
   "usingComponents": {
-    "m-tabbar": "/miniprogram_npm/maple-weapp/packages/tabbar/index"
+    "m-navbar": "/miniprogram_npm/maple-weapp/navbar/index"
   }
 }

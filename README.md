@@ -28,7 +28,7 @@ Register the component you need in the page or component JSON:
 ```json
 {
   "usingComponents": {
-    "m-button": "/miniprogram_npm/maple-weapp/packages/button/index"
+    "m-button": "/miniprogram_npm/maple-weapp/button/index"
   }
 }
 ```

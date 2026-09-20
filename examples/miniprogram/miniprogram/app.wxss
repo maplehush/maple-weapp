@@ -1,4 +1,4 @@
-@import "/miniprogram_npm/maple-weapp/packages/styles/variables.wxss";
+@import "/miniprogram_npm/maple-weapp/styles/variables.wxss";
 
 page {
   background-color: var(--m-bg-color-page);

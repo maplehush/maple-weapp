@@ -186,6 +186,49 @@ test('Loading exposes stable defaults', () => {
   assert.equal(definition.properties.text.value, '')
 })
 
+test('Icon distinguishes image sources from built-in icon names', () => {
+  const definition = loadComponent('packages/icon/index.js')
+  const { instance, observer } = createInstance(definition)
+
+  observer('name', 'search')
+  assert.equal(instance.data.isImage, false)
+
+  observer('name', 'https://example.com/icons/search.png')
+  assert.equal(instance.data.isImage, true)
+
+  observer('name', '/assets/icons/search.png')
+  assert.equal(instance.data.isImage, true)
+
+  observer('name', 'assets/icons/search.png')
+  assert.equal(instance.data.isImage, true)
+
+  observer('name', 'search.png')
+  assert.equal(instance.data.isImage, true)
+
+  observer('name', '  https://example.com/icons/search.png  ')
+  assert.equal(instance.data.imageSrc, 'https://example.com/icons/search.png')
+})
+
+test('Icon loads its font for both WebView and Skyline renderers', () => {
+  const previousWx = global.wx
+  let options
+  global.wx = {
+    loadFontFace(value) {
+      options = value
+    }
+  }
+
+  try {
+    const definition = loadComponent('packages/icon/index.js')
+    const { attached } = createInstance(definition)
+    attached()
+
+    assert.deepEqual(options.scopes, ['webview', 'skyline'])
+  } finally {
+    global.wx = previousWx
+  }
+})
+
 test('Dialog mask close obeys closeOnMaskTap', () => {
   const definition = loadComponent('packages/dialog/index.js')
   const { instance, events } = createInstance(definition, { visible: true, closeOnMaskTap: false })
@@ -207,5 +250,86 @@ test('ActionSheet cancel emits cancel then close', () => {
     { name: 'cancel', detail: undefined },
     { name: 'close', detail: undefined }
   ])
+})
+
+test('Navbar derives safe top and centered content space from the menu capsule', () => {
+  const previousWx = global.wx
+  global.wx = {
+    getWindowInfo() {
+      return { statusBarHeight: 47, windowWidth: 393, platform: 'ios' }
+    },
+    getMenuButtonBoundingClientRect() {
+      return { top: 56, left: 296, width: 87, height: 32 }
+    }
+  }
+
+  try {
+    const definition = loadComponent('packages/navbar/index.js')
+    const { instance, events, attached } = createInstance(definition, { safeArea: true })
+    attached()
+
+    assert.equal(instance.data.statusBarHeight, 47)
+    assert.equal(instance.data.navigationBarHeight, 50)
+    assert.equal(instance.data.totalHeight, 97)
+    assert.equal(instance.data.capsuleInset, 97)
+
+    instance.onBack()
+    assert.deepEqual(events[0], { name: 'back', detail: undefined })
+  } finally {
+    global.wx = previousWx
+  }
+})
+
+test('Navbar can disable the safe top and falls back when capsule metrics are unavailable', () => {
+  const previousWx = global.wx
+  global.wx = {
+    getSystemInfoSync() {
+      return { statusBarHeight: 24, windowWidth: 375, platform: 'android' }
+    },
+    getMenuButtonBoundingClientRect() {
+      return { top: 0, left: 0, width: 0, height: 0 }
+    }
+  }
+
+  try {
+    const definition = loadComponent('packages/navbar/index.js')
+    const { instance, attached } = createInstance(definition, { safeArea: false })
+    attached()
+
+    assert.equal(instance.data.statusBarHeight, 0)
+    assert.equal(instance.data.navigationBarHeight, 48)
+    assert.equal(instance.data.totalHeight, 48)
+    assert.equal(instance.data.capsuleInset, 88)
+  } finally {
+    global.wx = previousWx
+  }
+})
+
+test('Navbar falls back to legacy window metrics when modern APIs throw', () => {
+  const previousWx = global.wx
+  global.wx = {
+    getWindowInfo() {
+      throw new Error('not supported')
+    },
+    getSystemInfoSync() {
+      return { statusBarHeight: 20, windowWidth: 320, platform: 'ios' }
+    },
+    getMenuButtonBoundingClientRect() {
+      throw new Error('not ready')
+    }
+  }
+
+  try {
+    const definition = loadComponent('packages/navbar/index.js')
+    const { instance, attached } = createInstance(definition, { safeArea: true })
+    attached()
+
+    assert.equal(instance.data.statusBarHeight, 20)
+    assert.equal(instance.data.navigationBarHeight, 44)
+    assert.equal(instance.data.totalHeight, 64)
+    assert.equal(instance.data.capsuleInset, 88)
+  } finally {
+    global.wx = previousWx
+  }
 })
 

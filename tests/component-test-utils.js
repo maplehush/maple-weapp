@@ -20,7 +20,7 @@ function loadComponent(relativePath) {
 function createInstance(definition, data = {}) {
   const events = []
   const instance = {
-    data: { ...data },
+    data: { ...(definition.data || {}), ...data },
     setData(patch) {
       Object.assign(this.data, patch)
     },
@@ -44,6 +44,11 @@ function createInstance(definition, data = {}) {
     detached() {
       return definition.lifetimes && definition.lifetimes.detached
         ? definition.lifetimes.detached.call(instance)
+        : undefined
+    },
+    attached() {
+      return definition.lifetimes && definition.lifetimes.attached
+        ? definition.lifetimes.attached.call(instance)
         : undefined
     }
   }

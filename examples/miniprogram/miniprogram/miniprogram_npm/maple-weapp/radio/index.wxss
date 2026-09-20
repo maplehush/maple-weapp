@@ -1,0 +1,43 @@
+.m-radio {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48rpx;
+  color: var(--m-text-color-primary);
+  font-size: var(--m-font-size-medium);
+  line-height: var(--m-line-height-normal);
+}
+
+.m-radio__circle {
+  position: relative;
+  flex: 0 0 auto;
+  box-sizing: border-box;
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: var(--m-spacing-sm);
+  border: 2rpx solid var(--m-border-color);
+  border-radius: var(--m-radius-round);
+  background-color: var(--m-bg-color-container);
+  transition: background-color 0.12s ease, border-color 0.12s ease, opacity 0.12s ease;
+}
+
+.m-radio--checked .m-radio__circle {
+  border-color: var(--m-radio-active-color);
+}
+
+.m-radio__dot {
+  position: absolute;
+  top: 9rpx;
+  left: 9rpx;
+  width: 18rpx;
+  height: 18rpx;
+  border-radius: var(--m-radius-round);
+  background-color: var(--m-radio-active-color);
+}
+
+.m-radio__label {
+  min-width: 0;
+}
+
+.m-radio--disabled {
+  opacity: var(--m-state-disabled-opacity);
+}

@@ -1,0 +1,11 @@
+<view
+  class="m-switch {{checked ? 'm-switch--checked' : ''}} {{disabled ? 'm-switch--disabled' : ''}}"
+  style="--m-switch-active-color: {{activeColor}}; --m-switch-inactive-color: {{inactiveColor}};"
+  role="switch"
+  aria-checked="{{checked}}"
+  bindtap="onTap"
+>
+  <view class="m-switch__track">
+    <view class="m-switch__thumb"></view>
+  </view>
+</view>

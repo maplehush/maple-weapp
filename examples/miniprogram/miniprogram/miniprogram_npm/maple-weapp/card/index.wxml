@@ -1,0 +1,10 @@
+<view class="m-card {{bordered ? 'm-card--bordered' : ''}} {{shadow ? 'm-card--shadow' : ''}}">
+  <view wx:if="{{title || subtitle}}" class="m-card__header">
+    <view class="m-card__heading">
+      <view wx:if="{{title}}" class="m-card__title">{{title}}</view>
+      <view wx:if="{{subtitle}}" class="m-card__subtitle">{{subtitle}}</view>
+    </view>
+    <view class="m-card__extra"><slot name="extra" /></view>
+  </view>
+  <view class="m-card__body"><slot /></view>
+</view>
