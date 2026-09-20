@@ -1,0 +1,42 @@
+<view
+  class="m-cell {{clickable && !disabled ? 'm-cell--clickable' : ''}} {{border ? 'm-cell--border' : ''}} {{disabled ? 'm-cell--disabled' : ''}}"
+  hover-class="{{clickable && !disabled ? 'm-cell--active' : 'none'}}"
+  hover-start-time="0"
+  hover-stay-time="80"
+  bindtap="onTap"
+>
+  <view class="m-cell__body">
+    <view class="m-cell__left">
+      <view
+        wx:if="{{title}}"
+        class="m-cell__title"
+      >
+        {{title}}
+      </view>
+
+      <view
+        wx:if="{{label}}"
+        class="m-cell__label {{title ? '' : 'm-cell__label--alone'}}"
+      >
+        {{label}}
+      </view>
+    </view>
+
+    <view class="m-cell__right">
+      <view
+        wx:if="{{value}}"
+        class="m-cell__value"
+      >
+        {{value}}
+      </view>
+
+      <view
+        wx:if="{{arrow}}"
+        class="m-cell__arrow"
+        aria-hidden="true"
+      >
+        ›
+      </view>
+    </view>
+  </view>
+</view>

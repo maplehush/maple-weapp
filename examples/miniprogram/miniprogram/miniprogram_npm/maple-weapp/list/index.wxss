@@ -1,0 +1,4 @@
+.m-list { box-sizing: border-box; width: 100%; background-color: var(--m-bg-color-container); }
+.m-list--bordered { border-top: 1rpx solid var(--m-border-color); border-bottom: 1rpx solid var(--m-border-color); }
+.m-list--inset { margin: 0 var(--m-spacing-lg); overflow: hidden; border-radius: var(--m-radius-medium); }
+.m-list--inset.m-list--bordered { border: 1rpx solid var(--m-border-color); }

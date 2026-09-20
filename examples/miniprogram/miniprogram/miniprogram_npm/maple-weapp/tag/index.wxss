@@ -1,0 +1,70 @@
+.m-tag {
+  display: inline-flex;
+  align-items: center;
+  box-sizing: border-box;
+  min-height: 48rpx;
+  padding: 0 var(--m-spacing-md);
+  border-radius: var(--m-radius-round);
+  background-color: var(--m-bg-color-secondary);
+  color: var(--m-text-color-primary);
+  font-size: var(--m-font-size-small);
+  line-height: var(--m-line-height-tight);
+  vertical-align: middle;
+}
+
+.m-tag--small {
+  min-height: 40rpx;
+  padding: 0 var(--m-spacing-sm);
+  font-size: var(--m-font-size-small);
+}
+
+.m-tag--large {
+  min-height: 56rpx;
+  padding: 0 var(--m-spacing-lg);
+  font-size: var(--m-font-size-medium);
+}
+
+.m-tag--primary {
+  background-color: var(--m-color-primary);
+  color: var(--m-text-color-inverse);
+}
+
+.m-tag--success {
+  background-color: var(--m-color-success);
+  color: var(--m-text-color-inverse);
+}
+
+.m-tag--warning {
+  background-color: var(--m-color-warning);
+  color: var(--m-text-color-inverse);
+}
+
+.m-tag--danger {
+  background-color: var(--m-color-danger);
+  color: var(--m-text-color-inverse);
+}
+
+.m-tag--plain {
+  border: 2rpx solid currentColor;
+  background-color: transparent;
+}
+
+.m-tag--plain.m-tag--default {
+  border-color: var(--m-border-color);
+  color: var(--m-text-color-secondary);
+}
+
+.m-tag__content {
+  min-width: 0;
+}
+
+.m-tag__close {
+  margin-left: var(--m-spacing-xs);
+  padding: 0 4rpx;
+  font-size: var(--m-font-size-medium);
+  line-height: 1;
+}
+
+.m-tag--disabled {
+  opacity: var(--m-state-disabled-opacity);
+}

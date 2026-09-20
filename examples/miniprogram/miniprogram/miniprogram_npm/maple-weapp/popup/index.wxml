@@ -1,0 +1,7 @@
+<view wx:if="{{visible}}" class="m-popup m-popup--{{position}}">
+  <view class="m-popup__mask" bindtap="onMaskTap"></view>
+  <view class="m-popup__container {{round ? 'm-popup__container--round' : ''}}" catchtap="noop">
+    <view wx:if="{{closeable}}" class="m-popup__close" aria-label="关闭" bindtap="onClose">×</view>
+    <slot />
+  </view>
+</view>

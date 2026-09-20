@@ -1,0 +1,30 @@
+.m-loading {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.m-loading__spinner {
+  flex-shrink: 0;
+  box-sizing: border-box;
+  border-width: 3rpx;
+  border-style: solid;
+  border-radius: var(--m-radius-round);
+  animation: m-loading-spin 0.8s linear infinite;
+}
+
+.m-loading__text {
+  margin-left: var(--m-spacing-sm);
+  font-size: var(--m-font-size-medium);
+  line-height: var(--m-line-height-tight);
+}
+
+@keyframes m-loading-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

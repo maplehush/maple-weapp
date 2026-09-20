@@ -1,0 +1,8 @@
+<view
+  wx:if="{{visible}}"
+  class="m-toast m-toast--{{type}}"
+  role="status"
+  aria-live="polite"
+>
+  <view class="m-toast__content">{{message}}</view>
+</view>

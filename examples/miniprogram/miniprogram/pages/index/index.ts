@@ -20,24 +20,12 @@ Component({
       { id: 'tabs', name: 'Tabs', title: '标签页', description: '用于在多个内容视图之间切换。' },
       { id: 'navbar', name: 'Navbar', title: '导航栏', description: '提供标题、返回和左右插槽。' },
       { id: 'tabbar', name: 'Tabbar', title: '底部导航', description: '用于页面级的底部导航切换。' }
-    ],
-    tabbarItems: [
-      { label: '首页', icon: 'check' },
-      { label: '我的', icon: 'edit' }
-    ],
-    tabbarActive: 0
+    ]
   },
   methods: {
     onComponentTap(event: any) {
       const id = event.currentTarget.dataset.id
       wx.navigateTo({ url: '/pages/detail/index?id=' + id })
-    },
-    onChangeTabbar(event: any) {
-      const index = Number(event.detail.index)
-      this.setData({ tabbarActive: index })
-      if (index === 1) {
-        wx.navigateTo({ url: '/pages/profile/index' })
-      }
     }
   }
 })

@@ -1,0 +1,14 @@
+<view
+  class="m-radio {{checked ? 'm-radio--checked' : ''}} {{disabled ? 'm-radio--disabled' : ''}}"
+  style="--m-radio-active-color: {{activeColor}};"
+  role="radio"
+  aria-checked="{{checked}}"
+  bindtap="onTap"
+>
+  <view class="m-radio__circle">
+    <view wx:if="{{checked}}" class="m-radio__dot"></view>
+  </view>
+  <view class="m-radio__label">
+    <slot />
+  </view>
+</view>

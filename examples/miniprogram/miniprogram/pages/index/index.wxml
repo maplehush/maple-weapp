@@ -1,4 +1,7 @@
-<view class="home-page">
+<view class="page-shell">
+  <view class="page-navbar"><m-navbar title="Maple Weapp" fixed /></view>
+  <scroll-view class="page-scroll" scroll-y type="list" show-scrollbar="{{false}}">
+    <view class="home-page">
   <view class="home-header">
     <view class="home-kicker">MAPLE WEAPP</view>
     <view class="home-title">组件库</view>
@@ -31,6 +34,6 @@
     </view>
   </view>
 
-  <view class="home-footer-space"></view>
-  <m-tabbar items="{{tabbarItems}}" active="{{tabbarActive}}" fixed border="{{true}}" bindchange="onChangeTabbar" />
+    </view>
+  </scroll-view>
 </view>

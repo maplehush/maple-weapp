@@ -1,0 +1,36 @@
+.m-toast {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 1000;
+  max-width: 560rpx;
+  padding: var(--m-spacing-md) var(--m-spacing-lg);
+  box-sizing: border-box;
+  border-radius: var(--m-radius-medium);
+  background-color: rgba(31, 35, 41, 0.88);
+  color: var(--m-text-color-inverse);
+  font-size: var(--m-font-size-medium);
+  line-height: var(--m-line-height-normal);
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+.m-toast--primary {
+  background-color: var(--m-color-primary);
+}
+
+.m-toast--success {
+  background-color: var(--m-color-success);
+}
+
+.m-toast--warning {
+  background-color: var(--m-color-warning);
+}
+
+.m-toast--danger {
+  background-color: var(--m-color-danger);
+}
+
+.m-toast__content {
+  word-break: break-all;
+}

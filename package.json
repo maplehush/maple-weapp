@@ -2,7 +2,10 @@
   "name": "maple-weapp",
   "version": "0.1.0",
   "description": "A lightweight UI component library for native WeChat Mini Programs.",
+  "main": "index.js",
+  "miniprogram": "packages",
   "files": [
+    "index.js",
     "packages"
   ],
   "keywords": [

@@ -9,11 +9,11 @@
   },
   "include": [
     "packages/**/*.ts",
+    "examples/miniprogram/miniprogram/pages/detail/index.ts",
     "tests/**/*.js"
   ],
   "exclude": [
     "node_modules",
-    "examples",
     ".test-dist"
   ]
 }
